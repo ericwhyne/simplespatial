@@ -1,0 +1,41 @@
+/*
+ Copyright 2012 Eric Jonathan Whyne
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
+This is a code syntax scratch pad.
+
+Tool Tips Stuff:
+
+<div class='showhide'><table><tr><td><input type="checkbox" id='tooltipscheck' onClick='checkchangeaction()' checked="checked"></td><td>Tool Tips</td></tr></table></div>
+<div id='tooltip' class='bubbleback' align=left><img src="compass.png" class="floatLeft" height=100><b>Tool tip: </b><div id="tooltiptext"></div></div>
+
+document.getElementById('tooltiptext').innerHTML = "<p>This is an editable view of the data.</p><p>Use this area to modify your data and to make sure it was imported into the tool correctly.</p><p>Use the drop down menus above the columns to define what each column should represent.</p>";
+
+function ToolTip(strTT){
+	document.getElementById('tooltiptext').innerHTML = strTT;
+}
+
+document.getElementById('tooltiptext').innerHTML = "Click on the Google Earth Globe Icon to download or view your heatmap kmz.";
+document.getElementById('tooltiptext').innerHTML = "Click on the Google Earth Globe Icon to download or view your kml.";
+document.getElementById('tooltiptext').innerHTML = "Click on the Google Earth Globe Icon to download or view your kml.";
+
+if(document.getElementById('tooltipscheck').checked){
+	$('#tooltip').show("Explode");
+}else{
+	$('#tooltip').hide("Explode");
+}
+
+controlMenuFlipOff("tooltipscheck");
+	
+ToolTip("Enable the input menu and paste in some comma separated data to begin!");
