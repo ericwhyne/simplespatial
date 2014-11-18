@@ -356,10 +356,10 @@ function buildKml(mode){
 		            console.log("Received successful response:");
 		            console.log(response);
 		            if(!mode){
-			            document.getElementById('pmkmloutput').innerHTML = "<a href='" + response + "'><img src='geicon.png'></a><a href='http://maps.google.com/maps?q=http://" + window.location.hostname + "/" + response + "' target='_blank'><img src='gmicon.png'></a>";
+			            document.getElementById('pmkmloutput').innerHTML = "<a href='" + response + "'><img src='geicon.png'></a><a href='http://maps.google.com/maps?q=http://" + window.location.hostname + "/tools/" + response + "' target='_blank'><img src='gmicon.png'></a>";
 			            StatusWarnErr("Successfully built placemarks kml", "good");
 		            }else if(mode == 'maketrack'){
-		            	document.getElementById('tpmkmloutput').innerHTML = "<a href='" + response + "'><img src='geicon.png'></a><a href='http://maps.google.com/maps?q=http://" + window.location.hostname + "/" + response + "' target='_blank'><img src='gmicon.png'></a>";
+		            	document.getElementById('tpmkmloutput').innerHTML = "<a href='" + response + "'><img src='geicon.png'></a><a href='http://maps.google.com/maps?q=http://" + window.location.hostname + "/tools/" + response + "' target='_blank'><img src='gmicon.png'></a>";
 			            StatusWarnErr("Successfully built track kml", "good");
 		            }
 		        },
